@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import { Inter, Manrope, Space_Grotesk } from 'next/font/google';
 import StyledComponentsRegistry from './lib/registry';
 
-const inter = Inter({ subsets: ['latin'] });
-const manrope = Manrope({ subsets: ['latin'] });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false });
+const manrope = Manrope({ subsets: ['latin'], display: 'swap', adjustFontFallback: false });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], display: 'swap', adjustFontFallback: false });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
