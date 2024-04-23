@@ -4,14 +4,11 @@ import { Badge } from '@/components/ui/badge';
 import { CardContent, Card } from '@/components/ui/card';
 import Image from 'next/image';
 
-interface Tag {
-  name: string;
-}
 
 interface PreviewCardContent {
   imageUrl: string;
   description: string;
-  tags: Tag[];
+  tags: string[];
 }
 
 interface Props {
@@ -36,13 +33,13 @@ const Component = (props: Props) => {
         </p>
         {props.content?.tags && (
           <div className="flex flex-wrap gap-2 pt-4 ">
-            {props.content?.tags.map((tag: Tag) => (
+            {props.content?.tags.map((tag, i) => (
               <Badge
-                key={tag.name}
+                key={tag}
                 variant="outline"
                 className="text-[#707070]"
               >
-                {tag.name}
+                {tag}
               </Badge>
             ))}
 

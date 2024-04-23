@@ -13,14 +13,10 @@ import CapsuleButton from '@/components/ui/CapsuleButton';
 import FeaturedCard from '@/components/ui/FeaturedCard';
 import PreviewCard from '@/components/ui/PreviewCard';
 
-interface Tag {
-  name: string;
-}
-
 interface PreviewCardContent {
   imageUrl: string;
   description: string;
-  tags: Tag[];
+  tags: string[];
 }
 
 const PreviewCardInfo = {
@@ -110,6 +106,7 @@ const HomeLink = (props: {
   children: React.ReactNode;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  previewCardContent: any;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [cardPosition, setCardPosition] = useState({ top: 0, left: 0 });
@@ -134,11 +131,13 @@ const HomeLink = (props: {
     setIsHovered(false);
     props.onMouseLeave();
   };
-
+  // pointer-events-none md:pointer-events-auto
   return (
     <li>
       <div
-        className="flex justify-center items-center group mb-[32px]"
+        // className="flex items-center group mb-[32px] pointer-events-none xl:pointer-events-auto"
+        className="flex items-center group mb-[32px]"
+
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -153,6 +152,10 @@ const HomeLink = (props: {
           <span className="absolute left-0 right-0 bottom-0 h-[1px] bg-underlineLinkDefault transition-colors duration-300 group-hover:bg-textLinkHover"></span>
         </a>
       </div>
+      <div className="block lg:hidden">
+        {/* always show preview card inline on smaller screens */}
+        <PreviewCard content={props.previewCardContent} />
+      </div>
     </li>
   );
 };
@@ -165,7 +168,7 @@ const WorkSection = () => {
   const handleLinkHover = (
     imageUrl: string,
     description: string,
-    tags: Tag[]
+    tags: string[]
   ) => {
     setIsLinkHovered(true);
     // setPreviewCardContent(PreviewCardInfo.cyber);
@@ -188,7 +191,7 @@ const WorkSection = () => {
           <div className="col-start-2 col-end-6 xl:col-end-4">
             <Header1>entrée</Header1>
             <ul className="flex flex-col items-start">
-              <HomeLink
+              {/* <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
                   handleLinkHover(
@@ -200,60 +203,75 @@ const WorkSection = () => {
                 onMouseLeave={handleLinkLeave}
               >
                 Riot Games R&D - Game UI/UX
-              </HomeLink>
+              </HomeLink> */}
               <HomeLink
-                href="/cyber"
+                href="/dashboard"
                 onMouseEnter={() =>
-                  handleLinkHover('/placeholderPNG.png', 'Description 1111', [
-                    { name: 'new' },
-                    { name: 'odd' },
-                  ])
+                  // handleLinkHover('/placeholderPNG.png', 'Creating evidence-based MVP without clear product vision and access to user research', [
+                  //   'B2B' ,
+                  //   'Data' ,
+                  //   'Dashboard',
+                  // ])
+                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
                 }
                 onMouseLeave={handleLinkLeave}
-              >
-                AI-powered Cybersecurity Dashboard
-              </HomeLink>
-              <HomeLink
-                href="/cyber"
-                onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
-                }
-                onMouseLeave={handleLinkLeave}
+                previewCardContent={PreviewCardInfo.cyber}
               >
                 Enterprise Onboarding & Customer 360
               </HomeLink>
+       
               <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
+                  // handleLinkHover('/placeholderPNG.png', 'Customer Support Portal Redesign', [
+                  //   { name: 'tag1' },
+                  //   { name: 'tag2' },
+                  // ])
+                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
                 }
                 onMouseLeave={handleLinkLeave}
+                previewCardContent={PreviewCardInfo.cyber}
+              >
+                Do Gamers Dream of Customer Support?
+              </HomeLink>
+              <HomeLink
+                href="/cyber"
+                onMouseEnter={() =>
+                  // handleLinkHover('/placeholderPNG.png', 'Storage E-Commmerce Redesign', [
+                  //   'B2C' ,
+                  //   'A/B Testing' ,
+                  //   'Design System'
+                  // ])
+                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
+                }
+                onMouseLeave={handleLinkLeave}
+                previewCardContent={PreviewCardInfo.cyber}
               >
                 From Storage-Renting To Space-Booking
               </HomeLink>
               <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
+                  // handleLinkHover('/placeholderPNG.png', 'Description 1111', [
+                  //    'B2B' ,
+                  //   '0-to-1' ,
+                  //   'Data-viz' ,
+                  // ])
+                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
                 }
                 onMouseLeave={handleLinkLeave}
+                previewCardContent={PreviewCardInfo.cyber}
               >
-                Do Gamers Dream of Customer Support?
+                AI-powered Cybersecurity Dashb  oard
               </HomeLink>
             </ul>
           </div>
-          {isLinkHovered && (
-            <div className="col-start-4 col-end-6">
+          {/* {isLinkHovered && ( */}
+         {true && (
+            <div className="col-start-4 col-end-6 relative hidden lg:block">
+              <div className='absolute'>
               <PreviewCard content={previewCardContent} />
+              </div>
             </div>
           )}
         </div>
@@ -275,7 +293,7 @@ const SideSection = () => {
   const handleLinkHover = (
     imageUrl: string,
     description: string,
-    tags: Tag[]
+    tags: string[]
   ) => {
     setIsLinkHovered(true);
     setPreviewCardContent({
@@ -300,68 +318,39 @@ const SideSection = () => {
               <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
+                  // handleLinkHover('/placeholderPNG.png', 'Description 1', [
+                  //   'tag1',
+                  //   'tag2' ,
+                  // ])
+                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
                 }
                 onMouseLeave={handleLinkLeave}
+                previewCardContent={PreviewCardInfo.cyber}
               >
-                Riot Games R&D - Game UI/UX
+                Hamsa VR
               </HomeLink>
               <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1111', [
-                    { name: 'new' },
-                    { name: 'odd' },
-                  ])
+                  // handleLinkHover('/placeholderPNG.png', 'Description 1', [
+                  //   'tag1' ,
+                  //   'tag2' ,
+                  // ])
+                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
+
                 }
                 onMouseLeave={handleLinkLeave}
+                previewCardContent={PreviewCardInfo.cyber}
               >
-                AI-powered Cybersecurity Dashboard
-              </HomeLink>
-              <HomeLink
-                href="/cyber"
-                onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
-                }
-                onMouseLeave={handleLinkLeave}
-              >
-                Enterprise Onboarding & Customer 360
-              </HomeLink>
-              <HomeLink
-                href="/cyber"
-                onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
-                }
-                onMouseLeave={handleLinkLeave}
-              >
-                From Storage-Renting To Space-Booking
-              </HomeLink>
-              <HomeLink
-                href="/cyber"
-                onMouseEnter={() =>
-                  handleLinkHover('url_to_image_1', 'Description 1', [
-                    { name: 'tag1' },
-                    { name: 'tag2' },
-                  ])
-                }
-                onMouseLeave={handleLinkLeave}
-              >
-                Do Gamers Dream of Customer Support?
+                Time Sqauare Garden
               </HomeLink>
             </ul>
           </div>
           {isLinkHovered && (
-            <div className="col-start-4 col-end-6">
+            <div className="col-start-4 col-end-6 relative">
+              <div className='absolute'>
               <PreviewCard content={previewCardContent} />
+              </div>
             </div>
           )}
         </div>
