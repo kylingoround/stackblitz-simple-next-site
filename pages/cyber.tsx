@@ -1,6 +1,6 @@
 import PostTemplate from './Template';
 // import { useMDXComponents } from '/mdx-components'; // Update the path as needed
-import OverridingComponents from '/mdx-components';
+import OverridingComponents from '@/mdx-components';
 import CyberMDX from '/posts/cyber.mdx';
 
 export default function MyFirstPost() {
