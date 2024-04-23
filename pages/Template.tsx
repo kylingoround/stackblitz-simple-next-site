@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PostNavBar from '/components/ui/PostNavBar';
+import PostNavBar from '@/components/ui/PostNavBar';
 import '@/app/globals.css';
 
 // const PostWrapper = styled.div.attrs({ className: '' });
