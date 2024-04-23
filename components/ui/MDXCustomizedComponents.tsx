@@ -49,7 +49,8 @@ const CaseSectionWrapper = styled.div`
   margin-right:24px;
 `;
 
-export const Col_2_Section = (props: any) => (
+export const Col_2_Section = (props: any) => 
+  (
   <CaseSectionWrapper>
     <div className="w-full grid grid-cols-4 gap-4 text-[14px] text-[#DCDCDC] font-[400] leading-150 relative">
       <div className="col-start-1 col-end-2 mb-1 mt-1">Subject</div>
@@ -62,7 +63,6 @@ export const Col_2_Section = (props: any) => (
     </div>
   </CaseSectionWrapper>
 );
-
 export const Col_3_Section = (props: any) => (
   <CaseSectionWrapper>
     <div className="w-full grid grid-cols-4 gap-4 text-[14px] text-[#DCDCDC] font-[400] leading-150 relative">

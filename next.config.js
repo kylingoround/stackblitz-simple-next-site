@@ -15,6 +15,9 @@ const nextConfig = {
     styledComponents: true,
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'], // Add MDX as a page extension
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
 };
 
 module.exports = withMDX(nextConfig);

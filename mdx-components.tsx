@@ -21,6 +21,7 @@ const OverridingComponents = {
   li: (props: any) => (
     <li className="text-[16px] text[#2A2A2A] font-light">{props.children}</li>
   ),
+  ul: (props:any) =>(<ul className='list-disc'>{props.children}</ul>),
   img: (props: any) => (
     <Image
       sizes="100vw"
@@ -47,6 +48,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: ({ children }) => (
       <h1 className="text-[36px] text[#2A2A2A]">{children}</h1>
     ),
+    ul: ({children}) => (<ul className='list-disc'>{children}</ul>),
     img: (props) => (
       <Image
         sizes="100vw"
