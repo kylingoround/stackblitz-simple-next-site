@@ -18,6 +18,7 @@ export const CoverImage = (props: any) => (
     }}
     width="500"
     height="500"
+    className='cld-responsive'
     {...(props as ImageProps)}
   />
 );

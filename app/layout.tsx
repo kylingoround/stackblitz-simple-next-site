@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={manrope.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.min.js"></script>
       </body>
     </html>
   );
