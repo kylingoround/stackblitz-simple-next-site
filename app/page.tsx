@@ -185,7 +185,7 @@ const WorkSection = () => {
     <WorkSectionWrapper id="work">
       <div className="w-full h-full relative">
         <div className="w-full grid grid-cols-5 gap-4 ">
-          <div className="col-start-2 col-end-6 md:col-end-4">
+          <div className="col-start-2 col-end-6 xl:col-end-4">
             <Header1>entrée</Header1>
             <ul className="flex flex-col items-start">
               <HomeLink
@@ -294,7 +294,7 @@ const SideSection = () => {
     <SideSectionWrapper id="side">
       <div className="w-full h-full relative min-h-60vh">
         <div className="w-full grid grid-cols-5 gap-4 ">
-          <div className="col-start-2 col-end-4 ">
+          <div className="col-start-2 col-end-6 xl:col-end-4">
             <Header1>side</Header1>
             <ul className="flex flex-col items-start">
               <HomeLink
