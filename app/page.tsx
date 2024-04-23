@@ -26,12 +26,44 @@ const PreviewCardInfo = {
       'Easy to use cybersecurity monitor powered by AI and knowledge graph',
     tags: ['#strategy', '#saas', '#0-to-1'],
   },
-  secondProject: {
+  dashboard: {
     imageUrl: '/placeholderPNG.png',
     description:
-      'Easy to use cybersecurity monitor powered by AI and knowledge graph',
+      'Creating evidence-based MVP without clear product vision and access to user research',
     tags: ['#strategy', '#saas', '#0-to-1'],
   },
+  ubisoft: {
+    imageUrl: '/placeholderPNG.png',
+    description:
+      'Customer Support Portal Redesign',
+    tags: ['#service-design', '#cx', '#design-strategy'],
+  },
+  marketplace: {
+    imageUrl: '/placeholderPNG.png',
+    description:
+      'Defined persona, customer journey and value proposition to validate an ambitious B2B Marketplace',
+    tags: ['#b2b', '#0-to-1', '#mvp-validation', '#user-research'],
+  },
+  extraspace: {
+    imageUrl: '/placeholderPNG.png',
+    description:
+      'Storage E-Commmerce Redesign',
+    tags: ['#b2c', '#ecommerce', '#design-system'],
+  },
+  hamsa: {
+    imageUrl: '/placeholderPNG.png',
+    description:
+      'High five your friends in VR with your own hands',
+    tags: ['#vr', '#social', '#co-creation'],
+  },
+  garden: {
+    imageUrl: '/placeholderPNG.png',
+    description:
+      '24 hr organic garden in the heart of manhattan',
+    tags: ['#installation', '#physical', '#0-to-1'],
+  },
+ 
+ 
 };
 
 const SectionWrapper = styled.section`
@@ -80,7 +112,7 @@ const VerticalDottedLine = styled.div`
 const Header1 = styled.div`
   font-size: 32px;
   font-weight:600;
-  margin-bottom:48px;
+  margin-bottom:32px;
 `;
 
 const GreetingsText = styled.div`font-size: 32px;
@@ -134,9 +166,10 @@ const HomeLink = (props: {
   // pointer-events-none md:pointer-events-auto
   return (
     <li>
+      <div className='group'>
       <div
         // className="flex items-center group mb-[32px] pointer-events-none xl:pointer-events-auto"
-        className="flex items-center group mb-[32px]"
+        className="flex items-center pt-[16px] pb-[16px]"
 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -146,7 +179,7 @@ const HomeLink = (props: {
         </div>
         <a
           href={props.href}
-          className="text-textLinkDefault hover:text-textLinkHover  transition duration-300 ease-in-out  text-[24px] font-light relative"
+          className="text-textLinkDefault group-hover:text-textLinkHover  transition duration-300 ease-in-out  text-[24px] font-light relative"
         >
           {props.children}
           <span className="absolute left-0 right-0 bottom-0 h-[1px] bg-underlineLinkDefault transition-colors duration-300 group-hover:bg-textLinkHover"></span>
@@ -154,7 +187,10 @@ const HomeLink = (props: {
       </div>
       <div className="block lg:hidden">
         {/* always show preview card inline on smaller screens */}
+        <a href={props.href}>
         <PreviewCard content={props.previewCardContent} />
+        </a>
+      </div>
       </div>
     </li>
   );
@@ -207,15 +243,10 @@ const WorkSection = () => {
               <HomeLink
                 href="/dashboard"
                 onMouseEnter={() =>
-                  // handleLinkHover('/placeholderPNG.png', 'Creating evidence-based MVP without clear product vision and access to user research', [
-                  //   'B2B' ,
-                  //   'Data' ,
-                  //   'Dashboard',
-                  // ])
-                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
+                  handleLinkHover(PreviewCardInfo.dashboard.imageUrl, PreviewCardInfo.dashboard.description, PreviewCardInfo.dashboard.tags)
                 }
                 onMouseLeave={handleLinkLeave}
-                previewCardContent={PreviewCardInfo.cyber}
+                previewCardContent={PreviewCardInfo.dashboard}
               >
                 Enterprise Onboarding & Customer 360
               </HomeLink>
@@ -227,10 +258,10 @@ const WorkSection = () => {
                   //   { name: 'tag1' },
                   //   { name: 'tag2' },
                   // ])
-                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
+                  handleLinkHover(PreviewCardInfo.ubisoft.imageUrl, PreviewCardInfo.ubisoft.description, PreviewCardInfo.ubisoft.tags)
                 }
                 onMouseLeave={handleLinkLeave}
-                previewCardContent={PreviewCardInfo.cyber}
+                previewCardContent={PreviewCardInfo.ubisoft}
               >
                 Do Gamers Dream of Customer Support?
               </HomeLink>
@@ -242,21 +273,16 @@ const WorkSection = () => {
                   //   'A/B Testing' ,
                   //   'Design System'
                   // ])
-                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
+                  handleLinkHover(PreviewCardInfo.extraspace.imageUrl, PreviewCardInfo.extraspace.description, PreviewCardInfo.extraspace.tags)
                 }
                 onMouseLeave={handleLinkLeave}
-                previewCardContent={PreviewCardInfo.cyber}
+                previewCardContent={PreviewCardInfo.extraspace}
               >
                 From Storage-Renting To Space-Booking
               </HomeLink>
               <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
-                  // handleLinkHover('/placeholderPNG.png', 'Description 1111', [
-                  //    'B2B' ,
-                  //   '0-to-1' ,
-                  //   'Data-viz' ,
-                  // ])
                   handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
                 }
                 onMouseLeave={handleLinkLeave}
@@ -266,8 +292,7 @@ const WorkSection = () => {
               </HomeLink>
             </ul>
           </div>
-          {/* {isLinkHovered && ( */}
-         {true && (
+          {isLinkHovered && (
             <div className="col-start-4 col-end-6 relative hidden lg:block">
               <div className='absolute'>
               <PreviewCard content={previewCardContent} />
