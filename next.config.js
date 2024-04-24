@@ -16,7 +16,7 @@ const nextConfig = {
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'], // Add MDX as a page extension
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'lh3.googleusercontent.com'],
   },
 };
 

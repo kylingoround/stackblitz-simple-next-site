@@ -21,49 +21,47 @@ interface PreviewCardContent {
 
 const PreviewCardInfo = {
   cyber: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713838337/Cyber/Cyber_cover2_v9rvzl.png',
     description:
       'Easy to use cybersecurity monitor powered by AI and knowledge graph',
     tags: ['#strategy', '#saas', '#0-to-1'],
   },
   dashboard: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713829915/TCP/DashboardCover_zhv7x2.png',
     description:
       'Creating evidence-based MVP without clear product vision and access to user research',
     tags: ['#strategy', '#saas', '#0-to-1'],
   },
   ubisoft: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713838420/Ubisoft/UbisoftCover_rgmguf.png',
     description:
       'Customer Support Portal Redesign',
     tags: ['#service-design', '#cx', '#design-strategy'],
   },
   marketplace: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713838360/3M/Market_Cover_gzsxtp.png',
     description:
       'Defined persona, customer journey and value proposition to validate an ambitious B2B Marketplace',
     tags: ['#b2b', '#0-to-1', '#mvp-validation', '#user-research'],
   },
   extraspace: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713936695/ExstraSpace/ess_cover_1x_ken99t.png',
     description:
       'Storage E-Commmerce Redesign',
     tags: ['#b2c', '#ecommerce', '#design-system'],
   },
   hamsa: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713936497/unnamed_edxr4x.gif',
     description:
       'High five your friends in VR with your own hands',
     tags: ['#vr', '#social', '#co-creation'],
   },
   garden: {
-    imageUrl: '/placeholderPNG.png',
+    imageUrl: 'https://res.cloudinary.com/dtrdipypb/image/upload/v1713937916/ts2_w8sfcl.jpg',
     description:
       '24 hr organic garden in the heart of manhattan',
     tags: ['#installation', '#physical', '#0-to-1'],
-  },
- 
- 
+  }
 };
 
 const SectionWrapper = styled.section`
@@ -341,33 +339,24 @@ const SideSection = () => {
             <Header1>side</Header1>
             <ul className="flex flex-col items-start">
               <HomeLink
-                href="/cyber"
+                href="https://docs.google.com/presentation/d/1w9adKmAQs5Eip9pk9hrwGX0KUSiBLmcrYJQEMsrNAk0/edit#slide=id.gf220615335_0_40"
                 onMouseEnter={() =>
-                  // handleLinkHover('/placeholderPNG.png', 'Description 1', [
-                  //   'tag1',
-                  //   'tag2' ,
-                  // ])
-                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
+                  handleLinkHover(PreviewCardInfo.hamsa.imageUrl, PreviewCardInfo.hamsa.description, PreviewCardInfo.hamsa.tags)
                 }
                 onMouseLeave={handleLinkLeave}
-                previewCardContent={PreviewCardInfo.cyber}
+                previewCardContent={PreviewCardInfo.hamsa}
               >
                 Hamsa VR
               </HomeLink>
               <HomeLink
-                href="/cyber"
+                href="https://www.youtube.com/watch?v=0EnYRM3RyPE"
                 onMouseEnter={() =>
-                  // handleLinkHover('/placeholderPNG.png', 'Description 1', [
-                  //   'tag1' ,
-                  //   'tag2' ,
-                  // ])
-                  handleLinkHover(PreviewCardInfo.cyber.imageUrl, PreviewCardInfo.cyber.description, PreviewCardInfo.cyber.tags)
-
+                  handleLinkHover(PreviewCardInfo.garden.imageUrl, PreviewCardInfo.garden.description, PreviewCardInfo.garden.tags)
                 }
                 onMouseLeave={handleLinkLeave}
-                previewCardContent={PreviewCardInfo.cyber}
+                previewCardContent={PreviewCardInfo.garden}
               >
-                Time Sqauare Garden
+                Time Sqauare Electronic Garden
               </HomeLink>
             </ul>
           </div>
@@ -567,11 +556,7 @@ const Home = () => (
           <div className="col-start-2 col-end-5 ">
             <Header1>about</Header1>
             <div className="text-[24px] text-[#2A2A2A] leading-relaxed	">
-              I designed saas websites. I designed kiosk that sells fried
-              chicken. I built interface that translates machine gibberish into
-              words that match people’s intents. I built a garden at time
-              square. I built heads-up display in video games. I tried to build
-              less UI that communicates more.
+            Designing for me is like solving puzzles of joggling between people's goals, needs and resource limitations. However, doesn't matter if it is an e-commerce product list or A.I.-powered dashboard, there is always an opportunity to inspire intrigue while helping people get things done.
             </div>
           </div>
         </div>
