@@ -137,6 +137,7 @@ const HomeLink = (props: {
   onMouseEnter: () => void;
   onMouseLeave: () => void;
   previewCardContent: any;
+  openInNewTab: boolean;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [cardPosition, setCardPosition] = useState({ top: 0, left: 0 });
@@ -178,6 +179,7 @@ const HomeLink = (props: {
         <a
           href={props.href}
           className="text-textLinkDefault group-hover:text-textLinkHover  transition duration-300 ease-in-out  text-[24px] font-light relative"
+          {...(props.openInNewTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         >
           {props.children}
           <span className="absolute left-0 right-0 bottom-0 h-[1px] bg-underlineLinkDefault transition-colors duration-300 group-hover:bg-textLinkHover"></span>
@@ -245,36 +247,30 @@ const WorkSection = () => {
                 }
                 onMouseLeave={handleLinkLeave}
                 previewCardContent={PreviewCardInfo.dashboard}
+                openInNewTab={false}
               >
                 Enterprise Onboarding & Customer 360
               </HomeLink>
        
               <HomeLink
-                href="/cyber"
+                href="/ubisoftcx"
                 onMouseEnter={() =>
-                  // handleLinkHover('/placeholderPNG.png', 'Customer Support Portal Redesign', [
-                  //   { name: 'tag1' },
-                  //   { name: 'tag2' },
-                  // ])
                   handleLinkHover(PreviewCardInfo.ubisoft.imageUrl, PreviewCardInfo.ubisoft.description, PreviewCardInfo.ubisoft.tags)
                 }
                 onMouseLeave={handleLinkLeave}
                 previewCardContent={PreviewCardInfo.ubisoft}
+                openInNewTab={false}
               >
                 Do Gamers Dream of Customer Support?
               </HomeLink>
               <HomeLink
                 href="/cyber"
                 onMouseEnter={() =>
-                  // handleLinkHover('/placeholderPNG.png', 'Storage E-Commmerce Redesign', [
-                  //   'B2C' ,
-                  //   'A/B Testing' ,
-                  //   'Design System'
-                  // ])
                   handleLinkHover(PreviewCardInfo.extraspace.imageUrl, PreviewCardInfo.extraspace.description, PreviewCardInfo.extraspace.tags)
                 }
                 onMouseLeave={handleLinkLeave}
                 previewCardContent={PreviewCardInfo.extraspace}
+                openInNewTab={false}
               >
                 From Storage-Renting To Space-Booking
               </HomeLink>
@@ -285,6 +281,8 @@ const WorkSection = () => {
                 }
                 onMouseLeave={handleLinkLeave}
                 previewCardContent={PreviewCardInfo.cyber}
+                openInNewTab={false}
+
               >
                 AI-powered Cybersecurity Dashb  oard
               </HomeLink>
@@ -345,6 +343,7 @@ const SideSection = () => {
                 }
                 onMouseLeave={handleLinkLeave}
                 previewCardContent={PreviewCardInfo.hamsa}
+                openInNewTab={true}
               >
                 Hamsa VR
               </HomeLink>
@@ -355,6 +354,8 @@ const SideSection = () => {
                 }
                 onMouseLeave={handleLinkLeave}
                 previewCardContent={PreviewCardInfo.garden}
+                openInNewTab={true}
+
               >
                 Time Sqauare Electronic Garden
               </HomeLink>

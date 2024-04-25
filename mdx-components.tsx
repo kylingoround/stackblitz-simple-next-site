@@ -43,7 +43,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
     p: ({ children }) => (
-      <p className="text-[16px] text[#2A2A2A] font-[200]">{children}</p>
+      <p className="text-[16px] text[#2A2A2A] font-light">{children}</p>
     ),
     h1: ({ children }) => (
       <h1 className="text-[36px] text[#2A2A2A]">{children}</h1>

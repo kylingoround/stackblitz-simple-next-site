@@ -37,7 +37,7 @@ export const ImageWithCaption = (props: any) => (
       src={props.src}
       // {...(props as ImageProps)}
     />
-    <div className="max-width-[1440px] text-[#787878] mt-6 ml-6 mr-6 flex justify-center">
+    <div className="max-width-[1440px] text-[#787878] mt-6 ml-6 mr-6 flex justify-center mb-6">
       {props.children}
     </div>
   </div>
@@ -81,3 +81,26 @@ export const Col_3_Section = (props: any) => (
     </div>
   </CaseSectionWrapper>
 );
+
+const CustomWrapper = styled.div`
+  margin-left:24px;
+  margin-right:24px;
+  margin-top:48px;
+  margin-bottom:48px;
+  gap: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  position: relative;
+`
+export const MDX_P = (props: any)=> (
+  <CustomWrapper>{props.children}</CustomWrapper>
+)
+
+export const MDX_Quote = (props: any)=> (
+  <CustomWrapper><div>{props.children}</div></CustomWrapper>
+)
+
+export const FiveColumn = (props: any)=> (
+  <CustomWrapper>{props.children}</CustomWrapper>
+)
