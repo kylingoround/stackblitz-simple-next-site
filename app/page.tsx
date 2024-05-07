@@ -12,6 +12,7 @@ import DiamondSVG from './svg/Diamond';
 import CapsuleButton from '@/components/ui/CapsuleButton';
 import FeaturedCard from '@/components/ui/FeaturedCard';
 import PreviewCard from '@/components/ui/PreviewCard';
+import CommonFooter from '@/components/ui/Footer';
 
 interface PreviewCardContent {
   imageUrl: string;
@@ -562,7 +563,8 @@ const Home = () => (
           </div>
         </div>
       </SectionWrapper>
-      <FooterSection />
+      {/* <FooterSection /> */}
+      <CommonFooter/>
     </GridWithLineWrapper>
   </div>
 );

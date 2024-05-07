@@ -61,6 +61,16 @@ const config = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      fontSize: {
+        sm: '0.8rem', 
+        base: '1rem', // 16px
+        xl: '1.75rem', // 28px
+        '2xl': '2.2rem', // 36px
+        '3xl': '1.953rem', 
+        '4xl': '2.62rem', //42px
+        '5xl': '3.052rem',
+        '6xl':'6rem',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -74,6 +84,14 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
+        },
+      },
+      extends: {
+        fontSize: {
+          'caseLg':'48px',
+          'caseTitle':'36px', //36px
+          'caseM':'28px', //?rem
+          'caseS':'10px'
         },
       },
       animation: {

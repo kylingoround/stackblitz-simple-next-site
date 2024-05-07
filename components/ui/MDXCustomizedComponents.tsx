@@ -88,19 +88,56 @@ const CustomWrapper = styled.div`
   margin-top:48px;
   margin-bottom:48px;
   gap: 1rem;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 150%;
+  // font-size: 14px;
+  // font-weight: 400;
+  // line-height: 150%;
   position: relative;
 `
 export const MDX_P = (props: any)=> (
-  <CustomWrapper>{props.children}</CustomWrapper>
+  <CustomWrapper className='text-xl'>{props.children}</CustomWrapper>
+)
+
+export const MDX_EmphaszieText = (props: any)=> (
+  <CustomWrapper className='text-3xl leading-normal flex flex-col space-y-4'>{props.children}</CustomWrapper>
 )
 
 export const MDX_Quote = (props: any)=> (
   <CustomWrapper><div>{props.children}</div></CustomWrapper>
 )
 
-export const FiveColumn = (props: any)=> (
-  <CustomWrapper>{props.children}</CustomWrapper>
-)
+export const Col_5_TeamIntro = (props: any)=> {
+  const sections = props.sections;
+  const title = props.title;
+  const col2 = props.col2;
+  const col3 = props.col3;
+  const col4 = props.col4;
+  const col5 = props.col5;
+  return (
+    <CaseSectionWrapper>      
+      <div className="w-full grid grid-cols-5 gap-4 text-[14px] text-[#DCDCDC] font-[400] leading-150 relative">
+        <div className="col-start-1 col-end-2 mb-1 mt-1">Subject</div>
+        <div className="col-start-2 col-end-3 mb-1 mt-1">About</div>
+        <div className="col-start-3 col-end-4 mb-1 mt-1">Task</div>
+        <div className="col-start-4 col-end-5 mb-1 mt-1">Task</div>
+        <div className="col-start-5 col-end-6 mb-1 mt-1">Task</div>
+        <div className="absolute inset-x-0 bottom-0 h-[2px] bg-[#DCDCDC]"></div>
+      </div>
+      <div className="w-full grid grid-cols-5 gap-4 mt-4 text-[#2A2A2A]">
+        <div className="col-start-1 col-end-2 mb-1 mt-1">{title}</div>
+        <div className="col-start-2 col-end-3 mb-1 mt-1">{col2.map((content: any) => <div>{content}</div>)}</div>
+        <div className="col-start-3 col-end-4 mb-1 mt-1">{col3}</div>
+        <div className="col-start-4 col-end-5 mb-1 mt-1">{col4.map((content: any) => <div>{content}</div>)}</div>
+        <div className="col-start-5 col-end-6 mb-1 mt-1">{col5.map((content: any) => <div><b>{content.title + ":"}</b><span>  </span>{content.name}</div>)}</div>
+        {/* <div className="col-start-5 col-end-6 mb-1 mt-1">{col5}</div> */}
+      </div>
+    </CaseSectionWrapper>
+  )
+}
+
+export const PageTag = (props: any) => <div className='rounded-full pt-2 pb-2 pl-4 pr-4 bg-black text-caseM text-white'>{props.children}</div>
+
+export const PageTagsSection = (props: any ) => <CustomWrapper><div className='flex space-x-2'>{props.children}</div></CustomWrapper>
+
+export const ImpactSection = (props: any) => <CustomWrapper>{props.children}</CustomWrapper>
+
+export const ApproachSection = (props: any) => <CustomWrapper>{props.children}</CustomWrapper>

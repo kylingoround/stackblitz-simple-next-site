@@ -13,7 +13,7 @@ import Image, { ImageProps } from 'next/image';
 
 const OverridingComponents = {
   p: (props: any) => (
-    <p className="text-[16px] text[#2A2A2A] font-light">{props.children}</p>
+    <p className="text[#2A2A2A] font-light">{props.children}</p>
   ),
   h1: (props: any) => (
     <h1 style={{ color: '#2A2A2A', fontSize: '48px' }}>{props.children}</h1>
@@ -21,6 +21,7 @@ const OverridingComponents = {
   li: (props: any) => (
     <li className="text-[16px] text[#2A2A2A] font-light">{props.children}</li>
   ),
+  strong: (props: any) => (<strong className='font-bold'>{props.children}</strong>),
   ul: (props:any) =>(<ul className='list-disc'>{props.children}</ul>),
   img: (props: any) => (
     <Image
