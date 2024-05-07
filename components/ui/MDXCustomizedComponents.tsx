@@ -20,7 +20,7 @@ export const CoverImage = (props: any) => (
     width="500"
     height="500"
     className='cld-responsive'
-    alt={props.alt}
+    alt=""
     src={props.src}
     // {...(props as ImageProps)}
   />
@@ -28,7 +28,7 @@ export const CoverImage = (props: any) => (
 
 export const ImageWithCaption = (props: any) => (
   <div className="mt-2 mb-2">
-    <Image
+    <CldImage
       sizes="100vw"
       style={{
         width: '100%',
