@@ -127,10 +127,10 @@ export const Col_5_TeamIntro = (props: any)=> {
       </div>
       <div className="w-full grid grid-cols-5 gap-4 mt-4 text-[#2A2A2A]">
         <div className="col-start-1 col-end-2 mb-1 mt-1">{title}</div>
-        <div className="col-start-2 col-end-3 mb-1 mt-1">{col2.map((content: any) => <div>{content}</div>)}</div>
+        <div className="col-start-2 col-end-3 mb-1 mt-1">{col2.map((content: any, index: number) => <div key={index}>{content}</div>)}</div>
         <div className="col-start-3 col-end-4 mb-1 mt-1">{col3}</div>
-        <div className="col-start-4 col-end-5 mb-1 mt-1">{col4.map((content: any) => <div>{content}</div>)}</div>
-        <div className="col-start-5 col-end-6 mb-1 mt-1">{col5.map((content: any) => <div><b>{content.title + ":"}</b><span>  </span>{content.name}</div>)}</div>
+        <div className="col-start-4 col-end-5 mb-1 mt-1">{col4.map((content: any, index: number) => <div key={index}>{content}</div>)}</div>
+        <div className="col-start-5 col-end-6 mb-1 mt-1">{col5.map((content: any, index: number) => <div key={index}><b>{content.title + ":"}</b><span>  </span>{content.name}</div>)}</div>
         {/* <div className="col-start-5 col-end-6 mb-1 mt-1">{col5}</div> */}
       </div>
     </CaseSectionWrapper>
