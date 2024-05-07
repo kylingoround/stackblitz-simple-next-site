@@ -143,7 +143,10 @@ export const PageTagsSection = (props: any ) => <CustomWrapper><div className='f
 
 export const ImpactSection = (props: any) => <CustomWrapper>{props.children}</CustomWrapper>
 
-export const ApproachSection = (props: any) => <CustomWrapper>{props.children}</CustomWrapper>
+export const ApproachLink = (props:any) => <a href={props.href}>{props.children}</a>
+
+export const ApproachSection = (props: any) => <CustomWrapper>
+  <div className='flex'>{props.children}</div></CustomWrapper>
 
 // export const ApproachSection = (props: any) => {
 
@@ -152,3 +155,4 @@ export const ApproachSection = (props: any) => <CustomWrapper>{props.children}</
 //   ]
 //   return (<CustomWrapper>{props.children}</CustomWrapper>)
 // }
+
