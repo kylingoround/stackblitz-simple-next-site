@@ -1,13 +1,14 @@
 import Image, { ImageProps } from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+import { CldImage } from 'next-cloudinary';
 
 // cover image
 // 2 col section
 // 3 col section
 
 export const CoverImage = (props: any) => (
-  <Image
+  <CldImage
     sizes="100vw"
     style={{
       width: '100%',
@@ -19,7 +20,9 @@ export const CoverImage = (props: any) => (
     width="500"
     height="500"
     className='cld-responsive'
-    {...(props as ImageProps)}
+    alt={props.alt}
+    src={props.src}
+    // {...(props as ImageProps)}
   />
 );
 
