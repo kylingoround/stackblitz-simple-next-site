@@ -2,132 +2,100 @@ import {
   CoverImage,
   Col_2_Section,
   Col_3_Section,
-  Col_5_TeamIntro,
-  ApproachSection,
-  ApproachLink,
-  PageTag,
-  PageTagsSection,
-  MDX_EmphaszieText,
-  MDX_P,
-  ImpactCell,
-  ImpactHighlight
+  ImageWithCaption,
+  MDX_P
 } from '/components/ui/MDXCustomizedComponents';
 
 <CoverImage src="https://res.cloudinary.com/dtrdipypb/image/upload/v1713829915/TCP/DashboardCover_zhv7x2.png" />
 
-<PageTagsSection>
-  <PageTag>B2B SaaS</PageTag>
-  <PageTag>Product Strategy</PageTag>
-  <PageTag>Concept Validation</PageTag>
-</PageTagsSection>
-
-<MDX_EmphaszieText>
-Texas Capital Bank wanted to digitize its enterprise customer onboarding process and financial operator workflows. The previous process took weeks, was prone to error and regulatory risks. 
-
-With a tight timeline, uncertain product vision and a new team, I built the onboarding process and a customer 360 dashboard.
-</MDX_EmphaszieText>
-
-<ImpactHighlight>
-  <ImpactCell highlight='70%' description='Reduced time-to-help'/>
-  <ImpactCell highlight='~40%' description='Reduced time & Effort'/>
-  <ImpactCell highlight='3 Months' description='Estimated dev time unblocked'/>
-</ImpactHighlight>
-
-<Col_5_TeamIntro 
-  title='Team & Context' 
-  col2={['B2B', 'SaaS']} 
-  col3='2022' 
-  col4={['Customer Research', 'Project Management', 'MVP Prototyping', 'Product Strategy', 'Design System']}
-  col5={[{'title': 'UX Designer (Myself)', 'name': ''}, {'title': 'Principle Product Manager', 'name': ''}, {'title': 'Producer', 'name': ''}]}
-/>
+<Col_3_Section  
+ title="Introduction"
+first="Texas Capital Bank wanted to digitize its enterprise-client-facing operations, to reduce errors, mitigate legal & compliance risks and improve financial operator efficiency.">
+I needed to juggle between two projects while ramping up quickly in a new team, deliver high quality UI for an Enterprise Onboarding Solution, unblock my team's progress with a Customer 360 Dashboard exploration which has its progress stagnated due to lack of clear product vision & customer insights, and built trustful partnership with my (new) cross-functional partners to iterate solutions that balance usability & development velocity.
+</Col_3_Section>
 
 ![Project Timeline](https://res.cloudinary.com/dtrdipypb/image/upload/v1714004890/TCP/ResizedPlanning_civkfh.png)
 
 <Col_2_Section title='Juggling Two Projects at Once'>
-Challenge: Balancing two major projects during my integration into a new team environment.
-Design Approach: Collaborated closely with the product strategist to clarify project scopes and goals, leveraging existing design systems for increased design velocity.
-Iteration Process: Used Figma to prototype the onboarding flow, inviting crucial feedback from compliance stakeholders.
-Setbacks: Initial lack of clear direction on the Customer 360 Dashboard due to restricted user data access.
-Result: Successfully implemented the onboarding solution swiftly and initiated significant progress on the Customer 360 Dashboard.
+- I worked with the product strategist to understand the project scope and goals, and identify blockers, dependencies and what resources I can leverage to help increase my design velocity
+- I found out that the previous designer has built a solid design system foundation that allow me to quickly create and iterate onboarding's form-filling applications to satisfy usability & compliance requirements.
+- I also learnt that the second initiative ---- a 0-to-1 Customer 360 Dashboard exploration was delayed due to lack of access to the target user, so I started to recruit experts with similar backgrounds for proxy research.
+- I created an interactive Figma prototype that demonstrated the onboarding flow with TCP's risk & compliance stakeholders to invite iteration feedback
+- I partnered with the product owner to diligently defend the scope while maintaining a healthy relationship with stakeholders.
 </Col_2_Section>
 
 ![Onboarding](https://res.cloudinary.com/dtrdipypb/image/upload/v1713829916/TCP/Onboarding_nz6hhy.png)
 
-{/* <Col_2_Section title='Results'>
+<Col_2_Section title='Results'>
 
 - I was able to leverage the design system to wrap-up the onboarding solution within a few weeks, leaving me ample time to explore the ambitious 360 Dashboard initiative.
 - I was able to partner up with the product owner and production manager to defend the scope, keeping a sharp product focus while advocating for user values.
 - I maintained and contributed to the design system, which helped me whip up the design concept quickly to effectively communicate my design and gain alignment on product vision.
 
-</Col_2_Section> */}
+</Col_2_Section>
 
 <Col_2_Section title='Finding a Proxy for Customer Insights'>
-Challenge: Overcoming the lack of direct access to user data for the Customer 360 Dashboard.
-Design Approach: Conducted proxy user research with financial analysts to develop a pseudo-persona, supplemented by competitor analysis.
-Setbacks: Had to navigate the limitations of proxy research and ensure it didn't replace genuine user insights.
-Result: Developed a provoking MVP that clarified the product vision and was validated by leadership, integrating new design components based on this research.
+TCP wanted to explore an ambitious Customer 360 Dashboard that takes one-step further of its digital transformation, but it lacks clear direction, and due to internal policy, Method team couldn't get direct interview access or data related to the target users.
+
+- I aligned with the product strategist on a provocative strategy that might better stimulate a response from the leadership.
+- I conducted proxy user research with an experienced financial analyst of another national bank to create a pseudo-persona that provides evidence-based user goals, motivations and key objectives.
+- Combined with competitor research, I built out the first MVP prototype in order to more faithfully deliver our hypothesis of the product vision, leveraging the design system.
+
+Caveat: It is important not to confuse proxy research as a replacement of true customer insights, hence the importance of validation, but this research as well as competitor research does provide valuable insights on what problems people are solving in a specific industry.
 </Col_2_Section>
 
 ![Persona](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838041/TCP/Persona_and_Sketch_quys9q.png)
 
-{/* <Col_2_Section title='Solution 1'>
+<Col_2_Section title='Solution 1'>
 **Dashboard Home**
 The Dashboard home page was designed to present performance target, risk factor (loa/saving ratio) and help financial operators track recent application's review status. It also presents a search to tap into customer information easily.
-</Col_2_Section> */}
+</Col_2_Section>
 
 ![Dashboard - Option A](https://res.cloudinary.com/dtrdipypb/image/upload/v1713829915/TCP/DashboardA_il5avi.png)
 
-{/* <Col_2_Section title='Solution 1'>
+<Col_2_Section title='Solution 1'>
 **Performance Tab**
 The Performance tab presented key statistics of different business lines. It was designed to be modular and flexible, and each graph could be swapped out on the fly based on stakeholder & user feedback.
-</Col_2_Section> */}
+</Col_2_Section>
 
 ![Dashboard Cover](https://res.cloudinary.com/dtrdipypb/image/upload/v1713829915/TCP/DashboardCover_zhv7x2.png)
 
-{/* <MDX_P>
+<MDX_P>
 The evidence-based, high-fidelity interactive MVP successfully provoked the product owner and tech executive for a clear product vision, and I flashed out the rest of the dashboard features within 3 weeks for potential user validation.
-</MDX_P> */}
+</MDX_P>
 
-{/* <Col_2_Section title='Solution 2'>
+<Col_2_Section title='Solution 2'>
 **Drilldown Chart Customization**
 One feedback my team received was to provide a drill-down view of the Business-Line chart, and explore how to customize the drill-down view to reflect user's different priority based on each business line.
-</Col_2_Section> */}
+</Col_2_Section>
 
 ![Drilldown Customization](https://res.cloudinary.com/dtrdipypb/image/upload/v1713829916/TCP/Drilldown_Customization_czohhz.png)
 
-{/* <MDX_P>
+<MDX_P>
 Customization feature can be expansive to build because it requires new UI components, new interaction patterns. I needed to balance the scope and feasibility of the customization feature, navigate around ambiguity and design for stakeholder alignment & future user validation.
-</MDX_P> */}
+</MDX_P>
 
-{/* <Col_2_Section title='Solution 2'>
+<Col_2_Section title='Solution 2'>
 **Drilldown Chart Customization**
 I sketched out a drag-n-drop approach and a “customization toggle” approach. The layout's complexity didn't need to warrant a drag-n-drop interfaceCustomization Toggle can better support the comparison view and can better utilize I paid extra attention on usability to communicate the mode change while complying with the existing design system guidelines.
 
 Based on best practices and existing design system components, I built the drill-down and customization flow to support future user validation and to align with stakeholders.
-</Col_2_Section> */}
+</Col_2_Section>
 
-![Dashboard Cover](https://res.cloudinary.com/dtrdipypb/image/upload/v1713829915/TCP/CustomizationComparision_j8ushh.png)
+<ImageWithCaption alt="alt text" src="https://res.cloudinary.com/dtrdipypb/image/upload/v1713829915/TCP/CustomizationComparision_j8ushh.png">
+  Based on the trade-off, I aligned with my team that the Toggle option (option B) better suited the user context and development goals here. I added this to the figma prototype.
+</ImageWithCaption>
 
-{/* Based on the trade-off, I aligned with my team that the Toggle option (option B) better suited the user context and development goals here. I added this to the figma prototype. */}
-
-{/* <Col_2_Section title='Solution 2'>
+<Col_2_Section title='Solution 2'>
 Expanding the Design System to support Rapid Prototyping
 Since the product's vision was unclear, I leveraged the design system to build a high-fidelity prototype to help clarify the product's features & delivered customer value, and effectively gained stakeholder alignment. It is also a handy artifact for user validation in the future. I focused on:
 - Consistency: Ensuring typography and color consistency comply with existing components.
 - Scalability: easy to add new chart to the dashboard and drill-down view in the future
 - Componentized Charts: since this MVP was made for vision alignment and rapid iteration, build out charts in components can help with rapid iteration based on feedback
-</Col_2_Section> */}
-
-<Col_2_Section title='Balancing Customization Features Against Feasibility'>
-Challenge: Designing a customizable drill-down view for business line charts without overly complicating the interface.
-Design Approach: Explored simple customization toggles as opposed to more complex drag-and-drop interfaces, focusing on usability within the existing design system.
-Setbacks: Needed to make trade-offs between customization depth and development feasibility.
-Result: Chose a toggle approach that aligned with user needs and development capabilities, enhancing the dashboard's usability and functionality.
 </Col_2_Section>
-
 ![Design System Showcase](https://res.cloudinary.com/dtrdipypb/image/upload/v1713829916/TCP/TCP_DS_tulaf9.jpg)
 
-{/* <Col_2_Section title='Impact'>
+<Col_2_Section title='Impact'>
 
 - I successfully unblocked my team's progress with proxy and competitive research
 - Based on defined audience's duty, goals and frustrations, I narrowed down the project feature and scope, and aligned with product & executive stakeholders
@@ -136,15 +104,4 @@ Result: Chose a toggle approach that aligned with user needs and development cap
 
 Caveat:
 I moved onto another project after the early-discovery phase due to staffing, however I explored in-depth how I conduct follow-up user validation to quantify the design solution in the Marketplace case study.
-</Col_2_Section> */}
-
-“With a devoted focus on technology and a strong commitment to client-centric solutions, we have transformed the account opening experience for businesses,” said Texas Capital Chief Information Officer Don Goin. “Initio represents an innovative solution that addresses a pain point that many commercial clients traditionally face.”
-- Nancy McDonnell, head of Treasury Solutions at Texas Capital
-
-<Col_2_Section title='Summary'>
-This experience at Texas Capital Bank showcased my ability to rapidly adapt to new environments and deliver impactful design solutions that meet both user needs and business objectives. My key contributions included leveraging design systems for quick execution, conducting insightful proxy research, and aligning product visions with stakeholder expectations.
 </Col_2_Section>
-
-<MDX_P>
-Moving forward, I would seek even earlier alignment on project goals and user access, potentially improving the scope definition and reducing reliance on proxy data. Enhancing direct user engagement and iterative validation could further refine our solutions and ensure they more closely meet user expectations.
-</MDX_P>

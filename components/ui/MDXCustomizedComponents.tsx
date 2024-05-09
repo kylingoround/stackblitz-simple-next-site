@@ -119,10 +119,10 @@ export const Col_5_TeamIntro = (props: any)=> {
     <CaseSectionWrapper>      
       <div className="w-full grid grid-cols-5 gap-4 text-[14px] text-[#DCDCDC] font-[400] leading-150 relative">
         <div className="col-start-1 col-end-2 mb-1 mt-1">Subject</div>
-        <div className="col-start-2 col-end-3 mb-1 mt-1">About</div>
-        <div className="col-start-3 col-end-4 mb-1 mt-1">Task</div>
-        <div className="col-start-4 col-end-5 mb-1 mt-1">Task</div>
-        <div className="col-start-5 col-end-6 mb-1 mt-1">Task</div>
+        <div className="col-start-2 col-end-3 mb-1 mt-1">Category</div>
+        <div className="col-start-3 col-end-4 mb-1 mt-1">Year</div>
+        <div className="col-start-4 col-end-5 mb-1 mt-1">Scope</div>
+        <div className="col-start-5 col-end-6 mb-1 mt-1">Team</div>
         <div className="absolute inset-x-0 bottom-0 h-[2px] bg-[#DCDCDC]"></div>
       </div>
       <div className="w-full grid grid-cols-5 gap-4 mt-4 text-[#2A2A2A]">
@@ -130,7 +130,7 @@ export const Col_5_TeamIntro = (props: any)=> {
         <div className="col-start-2 col-end-3 mb-1 mt-1">{col2.map((content: any, index: number) => <div key={index}>{content}</div>)}</div>
         <div className="col-start-3 col-end-4 mb-1 mt-1">{col3}</div>
         <div className="col-start-4 col-end-5 mb-1 mt-1">{col4.map((content: any, index: number) => <div key={index}>{content}</div>)}</div>
-        <div className="col-start-5 col-end-6 mb-1 mt-1">{col5.map((content: any, index: number) => <div key={index}><b>{content.title + ":"}</b><span>  </span>{content.name}</div>)}</div>
+        <div className="col-start-5 col-end-6 mb-1 mt-1">{col5.map((content: any, index: number) => <div key={index}><b>{content.title}</b><span>  </span>{content.name}</div>)}</div>
         {/* <div className="col-start-5 col-end-6 mb-1 mt-1">{col5}</div> */}
       </div>
     </CaseSectionWrapper>
@@ -146,13 +146,8 @@ export const ImpactSection = (props: any) => <CustomWrapper>{props.children}</Cu
 export const ApproachLink = (props:any) => <a href={props.href}>{props.children}</a>
 
 export const ApproachSection = (props: any) => <CustomWrapper>
-  <div className='flex'>{props.children}</div></CustomWrapper>
+   <div className='flex'>{props.children}</div></CustomWrapper>
 
-// export const ApproachSection = (props: any) => {
+export const ImpactCell = (props:any) => <div><div>{props.highlight}</div><div>{props.description}</div></div>
 
-//   const content = [
-//     {'text': 'Discovery & journey mapping'}
-//   ]
-//   return (<CustomWrapper>{props.children}</CustomWrapper>)
-// }
-
+export const ImpactHighlight = (props: any) => <CustomWrapper><div className=''>{props.children}</div></CustomWrapper>

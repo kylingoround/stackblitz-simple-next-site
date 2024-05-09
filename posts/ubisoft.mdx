@@ -3,11 +3,14 @@ import {
   Col_2_Section,
   Col_3_Section,
   Col_5_TeamIntro,
+  ApproachSection,
+  ApproachLink,
   PageTag,
   PageTagsSection,
   MDX_EmphaszieText,
-  MDX_P
-
+  MDX_P,
+  ImpactCell,
+  ImpactHighlight
 } from '/components/ui/MDXCustomizedComponents';
 
 <CoverImage src="https://res.cloudinary.com/dtrdipypb/image/upload/v1713838420/Ubisoft/UbisoftCover_rgmguf.png" />
@@ -18,16 +21,6 @@ import {
   <PageTag>Design Strategy</PageTag>
 </PageTagsSection>
 
-[mockup test link](#mockup)
-
-<div>
-  <a>Discovery & Journey Mapping</a>
-  <a>Distill experience principles</a>
-  <a>Ideate opportunities</a>
-  <a>Alignment, prioritization and roadmap</a>
-  <a>Execution</a>
-</div>
-
 <MDX_EmphaszieText>
 Ubisoft aimed to overhaul its customer support services to increase player's time-in-game, increase issue coverage and increase the quality of support received. 
 
@@ -36,13 +29,31 @@ As part of Method and over 12 weeks, I mapped out the entire customer support ex
 Guided by a unified experience principle, Ubisoft launched the redesigned web portal in 2021 that serves millions of player across NA and EMEA.
 </MDX_EmphaszieText>
 
+<ImpactHighlight>
+  <ImpactCell highlight='40%' description='Reduced time-to-help'/>
+  <ImpactCell highlight='30%' description='Improved issue coverage'/>
+  <ImpactCell highlight='3' description='Unified Experience Principles'/>
+</ImpactHighlight>
+
 <Col_5_TeamIntro 
   title='Team & Context' 
   col2={['B2C', 'CX Design']} 
   col3='2021' 
   col4={['Design Research', 'Service Design', 'Responsive Web Design']}
-  col5={[{'title': 'Design Director', 'name': 'Boo'}, {'title': 'UX Designer', 'name': 'Boo'}, {'title': 'UX Designer', 'name': 'Kylin'}]}
+  col5={[{'title': 'Design Director', 'name': ''}, {'title': 'UX Designer', 'name': ''}, {'title': 'UX Designer', 'name': ''}]}
 />
+
+<ApproachSection>
+  <ApproachLink href='#discovery'>Discovery & Journey Mapping</ApproachLink>
+  <ApproachLink href='#principles'>Distill experience principles</ApproachLink>
+  <ApproachLink href='#ideation'>Ideate opportunities</ApproachLink>
+  <ApproachLink href='#alignment'>Alignment, prioritization and roadmap</ApproachLink>
+  <ApproachLink href='#execution'>Execution</ApproachLink>
+</ApproachSection>
+
+// some description maybe
+
+<a name="discovery"></a>
 
 <Col_2_Section title="Mapping Out the Player's Journey to Support">
 - **Challenge**: The client's complex portfolio demanded different support strategies for each game, creating a fragmented player experience.
@@ -64,6 +75,8 @@ I want to receive updates that my needs are addressed or if follow-ups are neede
 
 ![Interactive Login Guide](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838405/Ubisoft/Ubisoft_guide_vvmbqq.png)
 
+<a name="principles"></a>
+
 <Col_2_Section title='Designing a Unified Support Framework'>
 - Challenge: The client's 200+ types of support queries required a consistent, user-friendly framework across all teams.
 - Design Approach: We developed service patterns focused on assisting at the point of issue, providing clear escalation paths, and updating support progress consistently.
@@ -74,6 +87,10 @@ I want to receive updates that my needs are addressed or if follow-ups are neede
 ![Escalate Example](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838412/Ubisoft/UbiHelp_Content_Types-2_kemaa2.png)
 ![Update Story](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838397/Ubisoft/UbiHelp_Content_Types-1_usgyzk.png)
 
+<a name="ideation"></a>
+<a name="alignment"></a>
+<a name="execution"></a>
+
 <Col_2_Section title='Redesigning the Web Portal'>
 - Challenge: The previous web portal relied heavily on search functionality, which was cumbersome and required deep knowledge to use effectively.
 - Design Approach: Our team introduced high-level support categories and specific game-based entry points. We collaborated with the data team to leverage purchase history, game progress, and crash reports to deliver relevant assistive information.
@@ -82,19 +99,27 @@ I want to receive updates that my needs are addressed or if follow-ups are neede
 
 ![Legacy Design vs. New Design](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838416/Ubisoft/Ubisoft_comparision_b8xtso.png)
 
+<MDX_P>
 The architecture used to be centered around the search bar. This is problematic because the site lacks ways for users to scan the types of help that are available, and it requires a lot of effort and deep knowledge of customer support to frame someone's question precisely.
+</MDX_P>
 
 ![Information Architecture](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838401/Ubisoft/Ubisoft_IA_hcrqyi.png)
 
+<MDX_P>
 The new IA provides two entry points that help users identify their problem: through a high-level support category or through selecting a specific game. We also worked closely with the data and engineer team to brainstorm how to leverage user data, such as purchase history, game progression and crash reports, to promote relevant assistive information that might further reduce user's search effort.
+</MDX_P>
 
-<a name="mockup"></a>
+
 ![Mobile Mockup](https://res.cloudinary.com/dtrdipypb/image/upload/v1713838432/Ubisoft/Ubisoft_mobilemockup_nstudw.png)
 
+<MDX_P>
 Community and feedback also played a crucial role. Through stakeholder interviews, we learned that sometimes the community might be more responsive and knowledgeable on topics such as game knowledge or technical troubleshooting than the customer representatives. We envisioned a solution that integrates the support forum into support articles, so a player might engage the community directly if the official solution does not hit the mark, or if the player has something to contribute to a matter.
+</MDX_P>
 
 // Summary and Impact
 
 ### Reflection
 
+<MDX_P>
 Our collaborative and strategic approach impressed stakeholders, and the design artifacts were well received. By promoting a unified design vision and co-creating principles, we garnered enthusiasm for the future work. With more time, we would have loved to develop data metrics to monitor the web portal's impact and explore empowering the gaming community for self-help solutions.
+</MDX_P>
