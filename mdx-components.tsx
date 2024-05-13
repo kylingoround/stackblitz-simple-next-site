@@ -1,6 +1,7 @@
 import type { MDXComponents } from 'mdx/types';
 import React from 'react';
 import Image, { ImageProps } from 'next/image';
+import { CldImage } from 'next-cloudinary';
 
 // const MyMDXComponent = (props: any) => (
 //   <div className="my-mdx-component">{props.children}</div>
