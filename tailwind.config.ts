@@ -65,7 +65,12 @@ const config = {
         sm: '0.8rem', 
         base: '1rem', // 16px
         xl: '1.75rem', // 28px
-        '2xl': '2.2rem', // 36px
+        // '2xl': '2.2rem', // 36px
+        '2xl': ['2.2rem', {
+          lineHeight: '3rem',
+          letterSpacing: '-0.01em',
+          fontWeight: '500',
+        }],
         '3xl': '1.953rem', 
         '4xl': '2.62rem', //42px
         '5xl': '3.052rem',
