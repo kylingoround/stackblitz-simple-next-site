@@ -3,14 +3,14 @@ import React from 'react';
 import Image, { ImageProps } from 'next/image';
 import { CldImage } from 'next-cloudinary';
 
-// const MyMDXComponent = (props: any) => (
-//   <div className="my-mdx-component">{props.children}</div>
-// );
+const MyMDXComponent = (props: any) => (
+  <div className="my-mdx-component">{props.children}</div>
+);
 
-// export default {
-//   MyMDXComponent,
-//   // Add more custom components as needed
-// };
+export default {
+  MyMDXComponent,
+  // Add more custom components as needed
+};
 
 // const OverridingComponents = {
 //   p: (props: any) => (
