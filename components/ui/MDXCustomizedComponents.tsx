@@ -100,8 +100,12 @@ export const MDX_P = (props: any)=> (
   <CustomWrapper className='text-xl font-light'>{props.children}</CustomWrapper>
 )
 
+export const MDX_H1 = (props: any)=> (
+  <CustomWrapper className='text-3xl font-semibold'>{props.children}</CustomWrapper>
+)
+
 export const MDX_EmphaszieText = (props: any)=> (
-  <CustomWrapper><div className='text-3xl leading-normal font-light flex flex-col space-y-4'>{props.children}</div></CustomWrapper>
+  <CustomWrapper><div className='text-[1.7rem] leading-normal font-light flex flex-col space-y-4'>{props.children}</div></CustomWrapper>
 )
 
 export const MDX_Quote = (props: any)=> (
@@ -148,7 +152,7 @@ export const ApproachLink = (props:any) => <a href={props.href}>{props.children}
 export const ApproachSection = (props: any) => <CustomWrapper>
    <div className='flex'>{props.children}</div></CustomWrapper>
 
-export const ImpactCell = (props:any) => <div className='flex-1 bg-[#F3F5FA] rounded-md p-12  font-medium'><div className='text-4xl'>{props.highlight}</div><div className='text-2xl font-light mt-2'>{props.description}</div></div>
+export const ImpactCell = (props:any) => <div className='flex-1 bg-[#F3F5FA] rounded-md p-12  font-medium'><div className='text-[2rem] font-semibold'>{props.highlight}</div><div className='text-2xl font-light mt-2'>{props.description}</div></div>
 
 export const ImpactHighlight = (props: any) => <CustomWrapper><div className='w-full flex justify-between gap-8'>{props.children}</div></CustomWrapper>
 
