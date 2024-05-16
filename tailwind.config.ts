@@ -22,6 +22,9 @@ const config = {
         '2xl': '1400px',
       },
     },
+    fontSize:{
+      '3xl':'1.5rem'
+    },
     extend: {
       colors: {
         textLinkDefault: '#8A8A8A',
@@ -61,21 +64,20 @@ const config = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
-      fontSize: {
-        sm: '0.8rem', 
-        base: '1rem', // 16px
-        xl: '1.75rem', // 28px
-        // '2xl': '2.2rem', // 36px
-        '2xl': ['2.2rem', {
-          lineHeight: '3rem',
-          letterSpacing: '-0.01em',
-          fontWeight: '500',
-        }],
-        '3xl': '1.953rem', 
-        '4xl': '2.62rem', //42px
-        '5xl': '3.052rem',
-        '6xl':'6rem',
-      },
+      // fontSize: {
+      //   sm: '0.8rem', 
+      //   base: '1rem', // 16px
+      //   xl: '1.75rem', // 28px
+      //   '2xl': ['2.2rem', {
+      //     lineHeight: '3rem',
+      //     letterSpacing: '-0.01em',
+      //     fontWeight: '500',
+      //   }],
+      //   '3xl': '1rem', 
+      //   '4xl': '2.62rem', //42px
+      //   '5xl': '3.052rem',
+      //   '6xl':'6rem',
+      // },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
