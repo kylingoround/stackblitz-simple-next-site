@@ -104,8 +104,11 @@ export const MDX_H1 = (props: any)=> (
   <CustomWrapper className='text-3xl font-semibold'>{props.children}</CustomWrapper>
 )
 
-export const MDX_EmphaszieText = (props: any)=> (
-  <CustomWrapper><div className='text-[1.7rem] leading-normal font-light flex flex-col space-y-4'>{props.children}</div></CustomWrapper>
+export const MDX_EmphasizeText = (props: any)=> (
+  <CustomWrapper>
+    <div className='text-[2rem] text-zinc-40 leading-normal font-light flex flex-col space-y-4'>{props.children}
+    </div>
+  </CustomWrapper>
 )
 
 export const MDX_Quote = (props: any)=> (

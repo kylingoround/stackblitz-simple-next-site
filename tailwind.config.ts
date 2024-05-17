@@ -1,6 +1,15 @@
-import type { Config } from 'tailwindcss';
+/** @type {import('tailwindcss').Config} */
+// export default {
+//   content: [],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// }
 
-const config = {
+// import type { Config } from 'tailwindcss';
+
+export default {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx,mdx}',
@@ -62,18 +71,11 @@ const config = {
         },
       },
       fontSize: {
-        sm: '0.8rem', 
-        base: '1rem', // 16px
-        xl: '1.75rem', // 28px
-        '2xl': ['2.2rem', {
-          lineHeight: '3rem',
-          letterSpacing: '-0.01em',
-          fontWeight: '500',
-        }],
-        '3xl': '10rem', 
-        '4xl': '2.62rem', //42px
-        '5xl': '3.052rem',
-        '6xl':'6rem',
+        'capsule':'',
+        'ts':'',
+        'tm':'1.6rem',
+        'tl':'2.2rem',
+        'txl':'3rem',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -90,14 +92,6 @@ const config = {
           to: { height: '0' },
         },
       },
-      extends: {
-        fontSize: {
-          'caseLg':'48px',
-          'caseTitle':'36px', //36px
-          'caseM':'28px', //?rem
-          'caseS':'10px'
-        },
-      },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
@@ -105,6 +99,8 @@ const config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+}
 
-export default config;
+// satisfies Config;
+
+// export default config;
